@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.h                                             :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 10:08:39 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/06/24 14:43:40 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/06/24 17:35:04 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/06/25 13:34:12 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX01_H
-# define EX01_H
+#include "Zombie.h"
 
-# include "PhoneBook.hpp"
+Zombie::Zombie()
+{
+	
+}
 
-# include <iostream>
-# include <string>
-# include <iomanip>
+Zombie::Zombie(std::string new_name)
+{
+	name = new_name;
+}
 
-bool	is_only_digits(const std::string& input);
-void	print_table(PhoneBook phonebook, int index);
-void	printf_contact_info(Contact contact);
+Zombie::~Zombie()
+{
+	std::cout << name << " has been destroyed.\n";
+}
 
-#endif
+void	Zombie::announce(void)
+{
+	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
+}
+
+void	Zombie::setName(std::string new_name)
+{
+	name = new_name;
+}

@@ -1,13 +1,12 @@
-NAME 					= very_usefull_contact_list
+NAME 					= zombie_horde
 
 C++						= c++
 
 STD_FLAGS 				= -Wall -Wextra -Werror
 
 SRCS					= main.cpp \
-						  PhoneBook.cpp \
-						  Contact.cpp \
-						  utils.cpp \
+						  zombieHorde.cpp \
+						  Zombie.cpp \
 						  
 OBJS					= ${SRCS:.cpp=.o}
 
@@ -22,7 +21,7 @@ clean:
 						${REMOVE}
 
 fclean:					clean
-						rm -f very_usefull_contact_list
+						rm -f zombie_horde
 						
 re:						fclean all
 
