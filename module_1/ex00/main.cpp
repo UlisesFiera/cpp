@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.h                                             :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 10:08:39 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/06/24 17:43:47 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/06/24 18:16:17 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/06/24 18:30:56 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX01_H
-# define EX01_H
+#include "Zombie.h"
 
-# include "PhoneBook.hpp"
-# include "Contact.hpp"
+int	main(void)
+{
+	Zombie* heapZombie;
 
-# include <iostream>
-# include <string>
-# include <iomanip>
-
-bool	is_only_digits(const std::string& input);
-void	print_table(PhoneBook phonebook, int index);
-void	printf_contact_info(Contact contact);
-
-#endif
+	heapZombie = newZombie("Alfredo");
+	heapZombie->announce();
+	delete (heapZombie);
+	randomChump("Martita");
+}

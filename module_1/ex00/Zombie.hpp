@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.h                                             :+:      :+:    :+:   */
+/*   zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 10:08:39 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/06/24 17:43:47 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/06/24 17:25:29 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/06/24 18:39:34 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX01_H
-# define EX01_H
-
-# include "PhoneBook.hpp"
-# include "Contact.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 # include <iostream>
 # include <string>
-# include <iomanip>
 
-bool	is_only_digits(const std::string& input);
-void	print_table(PhoneBook phonebook, int index);
-void	printf_contact_info(Contact contact);
+class Zombie
+{
+	private:
+		std::string	name;
+	public:
+		Zombie(std::string new_name);
+		~Zombie();
+		void	announce(void);
+};
 
 #endif

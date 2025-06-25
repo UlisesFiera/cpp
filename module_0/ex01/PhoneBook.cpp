@@ -6,12 +6,9 @@
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 10:16:04 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/06/24 14:59:06 by ulfernan         ###   ########.fr       */
+/*   Updated: 2025/06/24 17:43:50 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
 
 #include "ex01.h"
 
