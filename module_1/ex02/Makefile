@@ -1,13 +1,10 @@
-NAME 					= very_usefull_contact_list
+NAME 					= hi
 
 C++						= c++
 
 STD_FLAGS 				= -Wall -Wextra -Werror
 
 SRCS					= main.cpp \
-						  PhoneBook.cpp \
-						  Contact.cpp \
-						  utils.cpp \
 						  
 OBJS					= ${SRCS:.cpp=.o}
 
@@ -22,7 +19,7 @@ clean:
 						${REMOVE}
 
 fclean:					clean
-						rm -f very_usefull_contact_list
+						rm -f hi
 						
 re:						fclean all
 

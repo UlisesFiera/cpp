@@ -1,0 +1,5 @@
+Hello world!
+This is a sample text file. hola
+We will replace some words here. hola
+Replace me if you can. hola
+Hello again. hola

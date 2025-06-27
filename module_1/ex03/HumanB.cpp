@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.h                                             :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 10:08:39 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/06/24 14:43:40 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/06/25 00:00:00 by uliseszeta        #+#    #+#             */
+/*   Updated: 2025/06/26 11:14:28 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX01_H
-# define EX01_H
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
-# include "PhoneBook.hpp"
+HumanB::HumanB(std::string new_name)
+{
+	name = new_name;
+}
 
-# include <iostream>
-# include <string>
-# include <iomanip>
+void	HumanB::setWeapon(Weapon& new_weapon)
+{
+	weapon = &new_weapon;
+}
 
-bool	is_only_digits(const std::string& input);
-void	print_table(PhoneBook phonebook, int index);
-void	printf_contact_info(Contact contact);
+const std::string&	HumanB::getName(void) const
+{
+	return (name);
+}
 
-#endif
+void	HumanB::attack(void)
+{
+	std::cout << getName() << " attacks with their " << weapon->getType() << "\n";
+}

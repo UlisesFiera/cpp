@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.h                                             :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 10:08:39 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/06/24 14:43:40 by ulfernan         ###   ########.fr       */
+/*   Updated: 2025/06/25 15:32:42 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EX01_H
-# define EX01_H
+#include <iostream>
+#include <string>
 
-# include "PhoneBook.hpp"
+int	main(void)
+{
+	std::string		hi;
+	std::string* 	stringPTR;
+	std::string&	stringREF = hi;
 
-# include <iostream>
-# include <string>
-# include <iomanip>
-
-bool	is_only_digits(const std::string& input);
-void	print_table(PhoneBook phonebook, int index);
-void	printf_contact_info(Contact contact);
-
-#endif
+	hi = "HI THIS IS BRAIN";
+	stringPTR = &hi;
+	std::cout << "String: " << &hi << "\n";
+	std::cout << "Pointer: " << &stringPTR << "\n";
+	std::cout << "Reference: " << &stringREF << "\n";
+	std::cout << "String: " << hi << "\n";
+	std::cout << "Pointer: " << *stringPTR << "\n";
+	std::cout << "Reference: " << stringREF << "\n";
+}

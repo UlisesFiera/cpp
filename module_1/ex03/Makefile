@@ -1,13 +1,13 @@
-NAME 					= very_usefull_contact_list
+NAME 					= weapons
 
 C++						= c++
 
 STD_FLAGS 				= -Wall -Wextra -Werror
 
 SRCS					= main.cpp \
-						  PhoneBook.cpp \
-						  Contact.cpp \
-						  utils.cpp \
+						  Weapon.cpp \
+						  HumanA.cpp \
+						  HumanB.cpp \
 						  
 OBJS					= ${SRCS:.cpp=.o}
 
@@ -22,7 +22,7 @@ clean:
 						${REMOVE}
 
 fclean:					clean
-						rm -f very_usefull_contact_list
+						rm -f weapons
 						
 re:						fclean all
 
