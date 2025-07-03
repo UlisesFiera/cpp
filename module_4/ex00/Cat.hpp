@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 17:22:40 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/03 12:15:31 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/03 13:34:52 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/03 14:13:38 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int main()
+# include <iostream>
+# include <string>
+# include "Animal.hpp"
+
+class Cat : public Animal
 {
-    ClapTrap clap("Clappy");
-    ScavTrap scav("Scavvy");
+	public:
+		Cat();
+		Cat(const Cat& copyCat);
+		Cat& operator=(const Cat& copyCat);
+		~Cat();
+		void			makeSound(void) const;
+		std::string		getType(void) const;
+	private:
+		std::string type;
+};
 
-    clap.attack("target1");
-    clap.takeDamage(5);
-    clap.beRepaired(3);
-
-    scav.attack("target2");
-    scav.takeDamage(20);
-    scav.beRepaired(10);
-    scav.guardGate();
-
-    return 0;
-}
+#endif
 

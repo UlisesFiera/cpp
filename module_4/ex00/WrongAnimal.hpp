@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 17:22:40 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/03 12:15:31 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/03 13:35:04 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/03 13:35:29 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-int main()
+# include <iostream>
+# include <string>
+
+class WrongAnimal 
 {
-    ClapTrap clap("Clappy");
-    ScavTrap scav("Scavvy");
+	public:
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& copyWrongAnimal);
+		WrongAnimal& operator=(const WrongAnimal& copyWrongAnimal);
+		~WrongAnimal();
+	private:
+};
 
-    clap.attack("target1");
-    clap.takeDamage(5);
-    clap.beRepaired(3);
-
-    scav.attack("target2");
-    scav.takeDamage(20);
-    scav.beRepaired(10);
-    scav.guardGate();
-
-    return 0;
-}
+#endif
 

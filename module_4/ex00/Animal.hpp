@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 17:22:40 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/03 12:15:31 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/03 13:34:42 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/03 14:17:21 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-int main()
+# include <iostream>
+# include <string>
+
+class Animal 
 {
-    ClapTrap clap("Clappy");
-    ScavTrap scav("Scavvy");
+	public:
+		Animal();
+		Animal(const Animal& copyAnimal);
+		Animal& operator=(const Animal& copyAnimal);
+		virtual ~Animal();
+		virtual void			makeSound() const;
+		virtual std::string		getType() const;
+	protected:
+		std::string type;
+};
 
-    clap.attack("target1");
-    clap.takeDamage(5);
-    clap.beRepaired(3);
-
-    scav.attack("target2");
-    scav.takeDamage(20);
-    scav.beRepaired(10);
-    scav.guardGate();
-
-    return 0;
-}
-
+#endif

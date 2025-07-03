@@ -1,10 +1,10 @@
-NAME 					= scavtrap
+NAME 					= claptrap
 
 C++						= c++
 
 STD_FLAGS 				= -Wall -Wextra -Werror
 
-SRCS					= main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS					= main.cpp ClapTrap.cpp
 						  
 OBJS					= ${SRCS:.cpp=.o}
 
@@ -19,7 +19,7 @@ clean:
 						${REMOVE}
 
 fclean:					clean
-						rm -f scavtrap
+						rm -f claptrap
 						
 re:						fclean all
 
