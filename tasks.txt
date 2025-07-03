@@ -1,0 +1,4 @@
+- check headers (use of both h and hpp together)
+- check use of camelCase
+- check leaks
+- check if I need to put the #include headers in all files or not
