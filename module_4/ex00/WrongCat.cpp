@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 13:35:01 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 12:54:09 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/04 12:20:36 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/04 12:22:42 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongCat::WrongCat()
 {
-	type = "wrong animal";
-	std::cout << "A WRONG animal was created.\n";
+	this->type = "wrong cat";
+	std::cout << "A WRONG cat was created.\n";
 }
 
-WrongAnimal::~WrongAnimal()
+WrongCat::~WrongCat()
 {
-	std::cout << "An WRONG animal has been destroyed.\n";
+	std::cout << "A WRONG cat has been destroyed.\n";
 }
 
-void	WrongAnimal::makeSound() const
+void	WrongCat::makeSound(void) const
 {
-	std::cout << "Weaughhwwrr. That's how a wrong animal sounds. If you call wrong cat, you'll hear this too.\n";
+	std::cout << "This should sound like 'Meeeeew' but won't happen.\n";
 }
 
-std::string	WrongAnimal::getType() const
+std::string	WrongCat::getType(void) const
 {
 	return (this->type);
 }

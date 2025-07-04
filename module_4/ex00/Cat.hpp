@@ -6,7 +6,7 @@
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 13:34:52 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/03 14:13:38 by ulfernan         ###   ########.fr       */
+/*   Updated: 2025/07/04 12:30:18 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+
 # include "Animal.hpp"
 
 class Cat : public Animal
@@ -31,4 +32,3 @@ class Cat : public Animal
 };
 
 #endif
-

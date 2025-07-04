@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 13:34:37 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 12:20:03 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/04 12:11:09 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/04 12:30:48 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-Animal::Animal()
-{
-	type = "animal";
-	std::cout << "An animal was created.\n";
-}
+# include <iostream>
+# include <string>
 
-Animal::~Animal()
-{
-	std::cout << "An animal has been destroyed.\n";
-}
+# include "WrongAnimal.hpp"
 
-void	Animal::makeSound() const
+class WrongCat : public WrongAnimal
 {
-	std::cout << "Generic animal sound. No inheritance happening.\n";
-}
+	public:
+		WrongCat();
+		WrongCat(const WrongCat& copyWrongCat);
+		WrongCat& operator=(const WrongCat& copyWrongCat);
+		~WrongCat();
+		void			makeSound(void) const;
+		std::string		getType(void) const;
+	private:
+		std::string type;
+};
 
-std::string	Animal::getType() const
-{
-	return (this->type);
-}
+#endif

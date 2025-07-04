@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 13:35:01 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 12:54:09 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/03 13:34:37 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/04 14:06:45 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
-WrongAnimal::WrongAnimal()
+Animal::Animal()
 {
-	type = "wrong animal";
-	std::cout << "A WRONG animal was created.\n";
+	type = "animal";
+	std::cout << "An animal was created.\n";
 }
 
-WrongAnimal::~WrongAnimal()
+Animal::~Animal()
 {
-	std::cout << "An WRONG animal has been destroyed.\n";
+	std::cout << "An animal has been destroyed.\n";
 }
 
-void	WrongAnimal::makeSound() const
+void	Animal::makeSound() const
 {
-	std::cout << "Weaughhwwrr. That's how a wrong animal sounds. If you call wrong cat, you'll hear this too.\n";
+	std::cout << "Generic animal sound. No inheritance happening.\n";
 }
 
-std::string	WrongAnimal::getType() const
+std::string	Animal::getType() const
 {
 	return (this->type);
 }

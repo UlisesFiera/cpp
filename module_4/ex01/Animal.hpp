@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 13:34:37 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 12:20:03 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/03 13:34:42 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/03 14:17:21 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-Animal::Animal()
-{
-	type = "animal";
-	std::cout << "An animal was created.\n";
-}
+# include <iostream>
+# include <string>
 
-Animal::~Animal()
+class Animal 
 {
-	std::cout << "An animal has been destroyed.\n";
-}
+	public:
+		Animal();
+		Animal(const Animal& copyAnimal);
+		Animal& operator=(const Animal& copyAnimal);
+		virtual ~Animal();
+		virtual void			makeSound() const;
+		virtual std::string		getType() const;
+	protected:
+		std::string type;
+};
 
-void	Animal::makeSound() const
-{
-	std::cout << "Generic animal sound. No inheritance happening.\n";
-}
-
-std::string	Animal::getType() const
-{
-	return (this->type);
-}
+#endif
