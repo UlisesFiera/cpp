@@ -6,7 +6,7 @@
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 13:34:47 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 14:35:34 by ulfernan         ###   ########.fr       */
+/*   Updated: 2025/07/04 20:23:33 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,17 @@ std::string	Cat::getType(void) const
 	return (this->type);
 }
 
-void	Cat::setIdeas(const std::string& idea)
+void	Cat::setIdeas(const std::string& idea, int index)
 {
-	static int	i = 0;
-	int			max_size;
-
-	max_size = brain->getBrainSize();
-	while (i < max_size)
+	if (index > brain_max_size)
 	{
-		brain->setIdea(i, idea);
-		i++;
+		std::cout << "Index bigger than brain capacity.\n";
+		return ;
 	}
+	brain->setIdea(index, idea);
 }
 
-std::string		getIdeas(void);
+std::string		Cat::getIdeas(int index)
+{
+	return (brain->getIdea(index));
+}

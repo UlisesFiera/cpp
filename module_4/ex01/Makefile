@@ -1,4 +1,4 @@
-NAME 					= poly
+NAME 					= ideas
 
 C++						= c++
 
@@ -19,7 +19,7 @@ clean:
 						${REMOVE}
 
 fclean:					clean
-						rm -f poly
+						rm -f ideas
 						
 re:						fclean all
 

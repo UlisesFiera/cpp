@@ -6,7 +6,7 @@
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 13:34:56 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 19:02:01 by ulfernan         ###   ########.fr       */
+/*   Updated: 2025/07/04 19:47:38 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ Dog::Dog()
 	this->type = "dog";
 	std::cout << "A dog was created.\n";
 	this->brain = new Brain();
+	this->brain_max_size = brain->getBrainSize();
 }
 
 Dog& Dog::operator=(const Dog& copyDog)
@@ -46,20 +47,17 @@ std::string	Dog::getType(void) const
 	return (this->type);
 }
 
-void	Dog::setIdeas(const std::string& idea)
+void	Dog::setIdeas(const std::string& idea, int index)
 {
-	static int	i = 0;
-	int			max_size;
-
-	max_size = brain->getBrainSize();
-	while (i < max_size)
+	if (index > brain_max_size)
 	{
-		brain->setIdea(i, idea);
-		i++;
+		std::cout << "Index bigger than brain capacity.\n";
+		return ;
 	}
+	brain->setIdea(index, idea);
 }
 
-std::string		getIdeas(void)
+std::string		Dog::getIdeas(int index)
 {
-	
+	return (brain->getIdea(index));
 }

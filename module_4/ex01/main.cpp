@@ -45,15 +45,20 @@ int main()
 
     delete doggy;
     delete kitty;
+	std::cout << "Delete test ended. Starting copy test...\n";
 
     // Copy test
     Dog agallas;
     Dog agallas_copy;
 
-    agallas.setIdeas("I'm scared!");
-    std::cout << "Agallas has an idea: " << 
+    agallas.setIdeas("agallas is scared!", 0);
+    std::cout << "agallas has an idea: " << agallas.getIdeas(0) << std::endl;
+	agallas_copy.setIdeas("agallas copy is not scared!", 0);
+	std::cout << "agallas_copy has an idea: " << agallas_copy.getIdeas(0) << std::endl;
     agallas_copy = agallas;
-
-
-    delete doggy2;
+	std::cout << "Now, agallas idea is the same as before: " << agallas.getIdeas(0) << std::endl;
+	std::cout << "And agallas_copy idea is the same: " << agallas_copy.getIdeas(0) << std::endl;
+	agallas_copy.setIdeas("I am very brave!", 0);
+	std::cout << "Still, agallas idea is the same: " << agallas.getIdeas(0) << std::endl;
+	std::cout << "But now, agallas_copy idea has changed: " << agallas_copy.getIdeas(0) << std::endl;
 }

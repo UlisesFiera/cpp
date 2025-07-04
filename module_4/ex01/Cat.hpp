@@ -6,7 +6,7 @@
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 13:34:52 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/04 14:35:34 by ulfernan         ###   ########.fr       */
+/*   Updated: 2025/07/04 20:23:34 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ class Cat : public Animal
 		~Cat();
 		void			makeSound(void) const;
 		std::string		getType(void) const;
-		void			setIdeas(const std::string& idea);
-		std::string		getIdeas(void);
+		void			setIdeas(const std::string& idea, int index);
+		std::string		getIdeas(int index);
 	private:
 		std::string type;
 		Brain*		brain;
+		int			brain_max_size;
 };
 
 #endif
