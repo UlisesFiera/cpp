@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulfernan <ulfernan@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 13:34:42 by ulfernan          #+#    #+#             */
-/*   Updated: 2025/07/05 12:24:21 by ulfernan         ###   ########.fr       */
+/*   Created: 2025/07/04 12:01:22 by ulfernan          #+#    #+#             */
+/*   Updated: 2025/07/04 19:45:29 by ulfernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <iostream>
 # include <string>
 
-class Animal 
+class Brain 
 {
 	public:
-		Animal();
-		Animal(const Animal& copyAnimal);
-		Animal& operator=(const Animal& copyAnimal);
-		virtual ~Animal();
-		virtual void			makeSound() const;
-		virtual std::string		getType() const;
+		Brain();
+		Brain(const Brain& copyBrain);
+		Brain& operator=(const Brain& copyBrain);
+		~Brain();
+		void		setIdea(int index, const std::string& idea);
+		std::string	getIdea(int index);
+		int			getBrainSize();
 	protected:
-		std::string type;
+		static const int	brain_size = 100;
+		std::string 		ideas[brain_size];
 };
 
 #endif
